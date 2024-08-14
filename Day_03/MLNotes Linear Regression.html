@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>MLNotes</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>MLNotes Linear Regression</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7482,41 +7482,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Types-of-Machine-Learning">Types of Machine Learning<a class="anchor-link" href="#Types-of-Machine-Learning">¶</a></h2><ul>
-<li><ol>
-<li>Supervised Machine Learning</li>
-</ol>
-<ul>
-<li>a. Training on labeled data</li>
-<li>b. Useful in classification and regression tasks</li>
-</ul>
-</li>
-<li><ol start="2">
-<li>Unsupervisied Machine Learning</li>
-</ol>
-<ul>
-<li>a. Training on unlabelled data</li>
-<li>b. Useful in clustering and anomaly detection</li>
-</ul>
-</li>
-<li><ol start="3">
-<li>Reinforcement Learning</li>
-</ol>
-<ul>
-<li>a. Training an agent to make actions that maximize a reward</li>
-<li>b. Useful in self-driving</li>
-</ul>
-</li>
-<li><ol start="4">
-<li>Semisupervised Machine Learning</li>
-</ol>
-<ul>
-<li>a. Where we have data which has both labelled and unlabelled data</li>
-<li>b. We need to capture unlebelled data use unsupervised ML on it and get it clustered apply labels as per cluster and then add it back to complete data set</li>
-<li>c. Now on complete dataset use Supervised ML to solve it.</li>
-</ul>
-</li>
-</ul>
+<h1 id="Linear-Regression">Linear Regression<a class="anchor-link" href="#Linear-Regression">¶</a></h1>
 </div>
 </div>
 </div>
@@ -7527,74 +7493,71 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Applications-of-Machine-Learning">Applications of Machine Learning<a class="anchor-link" href="#Applications-of-Machine-Learning">¶</a></h2><ul>
-<li><ol>
-<li>Healthcare : Disease diagnosis, Drug discovery, Personalised treatment recommendations.</li>
+<h2 id="Linear-Regression-related-terms">Linear Regression related terms<a class="anchor-link" href="#Linear-Regression-related-terms">¶</a></h2><p><strong>Note:</strong> Linear regression is a foundational algorithm in machine learning, providing a solid understanding of the core concepts. It's essential to grasp these terms to delve deeper into more complex models and techniques.</p>
+<h3 id="Linear-Regression">Linear Regression<a class="anchor-link" href="#Linear-Regression">¶</a></h3><ul>
+<li><strong>Definition:</strong> A statistical method used to model the relationship between a dependent variable (target) and one or more independent variables (predictors) by fitting a linear equation to the observed data.</li>
+<li><strong>Goal:</strong> To find the best-fitting line that minimizes the difference between the predicted values and the actual values.</li>
+</ul>
+<h3 id="Gradient-Descent">Gradient Descent<a class="anchor-link" href="#Gradient-Descent">¶</a></h3><ul>
+<li><strong>Definition:</strong> An optimization algorithm used to find the minimum of a function. In machine learning, it's used to find the optimal parameters (weights and biases) of a model.</li>
+<li><strong>Process:</strong> It iteratively adjusts the parameters in the direction of steepest descent (negative gradient) of the error function until a minimum is reached.</li>
+</ul>
+<h3 id="Gradient-Descent-Optimizer">Gradient Descent Optimizer<a class="anchor-link" href="#Gradient-Descent-Optimizer">¶</a></h3><ul>
+<li><strong>Definition:</strong> An algorithm that implements the gradient descent process.</li>
+<li><strong>Role:</strong> It determines how the parameters are updated at each iteration.</li>
+<li><strong>Examples:</strong> Stochastic Gradient Descent (SGD), Adam, RMSprop.</li>
+</ul>
+<h3 id="Best-Fit-Line:-y-=-mx-+-c">Best Fit Line: y = mx + c<a class="anchor-link" href="#Best-Fit-Line:-y-=-mx-+-c">¶</a></h3><ul>
+<li><strong>Definition:</strong> The straight line that best represents the relationship between two variables on a scatter plot.</li>
+<li><strong>Equation:</strong> y = mx + c, where:<ul>
+<li>y is the dependent variable</li>
+<li>x is the independent variable</li>
+<li>m is the slope of the line</li>
+<li>c is the y-intercept (the value of y when x is 0)</li>
+</ul>
+</li>
+</ul>
+<h3 id="Slope-(m)">Slope (m)<a class="anchor-link" href="#Slope-(m)">¶</a></h3><ul>
+<li><strong>Definition:</strong> The rate of change of the dependent variable with respect to the independent variable. It represents the steepness of the line.</li>
+<li><strong>Interpretation:</strong> A positive slope indicates a positive relationship between the variables, while a negative slope indicates a negative relationship.</li>
+</ul>
+<h3 id="Intercept-(c)">Intercept (c)<a class="anchor-link" href="#Intercept-(c)">¶</a></h3><ul>
+<li><strong>Definition:</strong> The value of the dependent variable when the independent variable is zero. It's the point where the line crosses the y-axis.</li>
+</ul>
+<h3 id="Error-(Residual)">Error (Residual)<a class="anchor-link" href="#Error-(Residual)">¶</a></h3><ul>
+<li><strong>Definition:</strong> The difference between the actual value of the dependent variable and the predicted value from the regression line.</li>
+<li><strong>Role:</strong> The goal of linear regression is to minimize the sum of squared errors.</li>
+</ul>
+<h3 id="Global-Minima">Global Minima<a class="anchor-link" href="#Global-Minima">¶</a></h3><ul>
+<li><strong>Definition:</strong> The lowest point of a function over its entire domain.</li>
+<li><strong>Goal:</strong> In gradient descent, the aim is to find the global minimum of the error function to achieve the best model performance.</li>
+</ul>
+<h3 id="Mathematical-Intuition-of-Linear-Regression">Mathematical Intuition of Linear Regression<a class="anchor-link" href="#Mathematical-Intuition-of-Linear-Regression">¶</a></h3><ul>
+<li><strong>Objective:</strong> To find the values of m and c that minimize the sum of squared errors between the observed data points and the predicted values on the line.</li>
+<li><strong>Method:</strong><ol>
+<li>Initialize random values for m and c.</li>
+<li>Calculate the error for each data point.</li>
+<li>Calculate the gradient of the error function with respect to m and c.</li>
+<li>Update m and c using gradient descent.</li>
+<li>Repeat steps 2-4 until the error converges to a minimum.</li>
 </ol>
 </li>
-<li><ol start="2">
-<li>Finance : Fraud detection, Credit risk assessment</li>
-</ol>
-</li>
-<li><ol start="3">
-<li>Marketing : Analyzing customer behaviour and preferences</li>
-</ol>
-</li>
+<li><strong>Underlying principle:</strong> The line that minimizes the sum of squared errors is the best fit line.</li>
 </ul>
 </div>
 </div>
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Challenges-of-Machine-Learning">Challenges of Machine Learning<a class="anchor-link" href="#Challenges-of-Machine-Learning">¶</a></h3><ul>
-<li><p><strong>High Quality Data</strong>: Machine learning models rely heavily on data quality. Poor quality data with inaccuracies, noise, or missing values can lead to unreliable or biased results. Ensuring data is clean, accurate, and relevant is crucial for model performance.</p>
-</li>
-<li><p><strong>Interpretability</strong>: Many machine learning models, especially complex ones like deep learning, can be seen as "black boxes." It can be difficult to understand how these models make decisions, which is a challenge when trying to explain the results or ensure that the model is functioning as intended.</p>
-</li>
-<li><p><strong>Privacy Concerns and Biases</strong>: Machine learning models often require large amounts of data, which can include sensitive personal information. Ensuring that data is used ethically and securely is vital. Additionally, models can unintentionally perpetuate biases present in the training data, leading to unfair or discriminatory outcomes.</p>
-</li>
-</ul>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-python"><pre><span></span>
+</pre></div>
 </div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Future-of-Machine-Learning">Future of Machine Learning<a class="anchor-link" href="#Future-of-Machine-Learning">¶</a></h2><ul>
-<li><p>The future of machine learning is bright, with continued advancements in technology and increasing demand for data-driven solutions. Some of the emerging trends in machine learning include deep learning, which involves the use of neural networks to model complex relationships in data, edge computing, which involves processing data locally on devices rather than in the cloud.</p>
-</li>
-<li><p>Other areas of growth include explainable AI, which aims to make machine learning models more transparent and interpretable, and federated learning, which enables multiple devices to collaborate on training machine learning models without sharing raw data. As machine learning continues to evolve, it has the potential to transform every aspect of our lives.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 </div>
 </div>
 </div>
