@@ -7741,6 +7741,42 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Batch-Learning">Batch Learning<a class="anchor-link" href="#Batch-Learning">¶</a></h2><p><strong>Definition</strong>: Batch learning, also known as offline learning, refers to a type of machine learning where the model is trained on the entire dataset all at once. The training process involves feeding the model with the full dataset, adjusting the model parameters based on the data, and then deploying the trained model for use.</p>
+<p><strong>Characteristics</strong>:</p>
+<ul>
+<li><strong>Static Data</strong>: Batch learning is typically used when the entire dataset is available before training, and the data does not change frequently.</li>
+<li><strong>Time-Consuming</strong>: Since the entire dataset is used for training, the process can be time-consuming and resource-intensive.</li>
+<li><strong>Periodic Retraining</strong>: If new data becomes available or the data distribution changes, the model may need to be retrained from scratch, incorporating the new data.</li>
+</ul>
+<p><strong>Example</strong>:</p>
+<ul>
+<li><strong>Image Recognition</strong>: A batch learning model is trained on a large set of labeled images to recognize objects. Once trained, the model is deployed to identify objects in new images. If the model needs improvement or new images become available, the model is retrained on the entire updated dataset.</li>
+</ul>
+<h2 id="Online-Learning">Online Learning<a class="anchor-link" href="#Online-Learning">¶</a></h2><p><strong>Definition</strong>: Online learning, also known as incremental learning, is a type of machine learning where the model is trained incrementally, one data point or a small batch at a time. The model updates its parameters continuously as new data becomes available, making it suitable for real-time learning scenarios.</p>
+<p><strong>Characteristics</strong>:</p>
+<ul>
+<li><strong>Dynamic Data</strong>: Online learning is used when data arrives sequentially or in real-time, and the model needs to adapt to new information continuously.</li>
+<li><strong>Less Resource-Intensive</strong>: Since the model updates incrementally, it requires less computational power and can be trained on-the-fly.</li>
+<li><strong>Adaptability</strong>: Online learning models can quickly adapt to changes in data distribution, making them ideal for environments where the data is constantly evolving.</li>
+</ul>
+<p><strong>Example</strong>:</p>
+<ul>
+<li><strong>Stock Price Prediction</strong>: An online learning model is trained to predict stock prices based on real-time financial data. As new data points (e.g., stock prices, market news) arrive, the model updates its predictions accordingly, allowing it to adapt to changing market conditions.</li>
+</ul>
+<h3 id="Summary-for-Notes">Summary for Notes<a class="anchor-link" href="#Summary-for-Notes">¶</a></h3><ul>
+<li><strong>Batch Learning</strong>: The model is trained on the entire dataset at once, used for static data, and requires periodic retraining when new data is available (e.g., image recognition).</li>
+<li><strong>Online Learning</strong>: The model is trained incrementally, one data point at a time, used for dynamic data, and can adapt to real-time changes (e.g., stock price prediction).</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Applications-of-Machine-Learning">Applications of Machine Learning<a class="anchor-link" href="#Applications-of-Machine-Learning">¶</a></h2><ul>
 <li><ol>
 <li>Healthcare : Disease diagnosis, Drug discovery, Personalised treatment recommendations.</li>
