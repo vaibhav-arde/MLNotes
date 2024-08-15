@@ -7527,6 +7527,210 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Supervised-Machine-Learning">Supervised Machine Learning<a class="anchor-link" href="#Supervised-Machine-Learning">¶</a></h2><p><strong>Definition</strong>: Supervised machine learning involves training a model on a labeled dataset, where the input data is paired with the correct output. The model learns to map inputs to outputs by minimizing the difference between its predictions and the actual outcomes. After training, the model can make predictions on new, unseen data.</p>
+<p><strong>Purpose</strong>: Supervised learning is used for tasks where the goal is to predict a target variable based on input features. It's commonly applied in classification and regression tasks.</p>
+<h3 id="Types-of-Supervised-Machine-Learning">Types of Supervised Machine Learning<a class="anchor-link" href="#Types-of-Supervised-Machine-Learning">¶</a></h3><ol>
+<li><p><strong>Classification</strong></p>
+<ul>
+<li><strong>Definition</strong>: Classification is a type of supervised learning where the model learns to predict a categorical label (discrete output) from input features. The output is a class or category.</li>
+<li><strong>Common Algorithms</strong>:<ul>
+<li><strong>Logistic Regression</strong>: Predicts the probability of a binary outcome (e.g., spam or not spam).</li>
+<li><strong>Support Vector Machine (SVM)</strong>: Finds the hyperplane that best separates different classes in the feature space.</li>
+<li><strong>Decision Trees</strong>: Splits the data into branches based on feature values, leading to a decision about the class.</li>
+<li><strong>Random Forest</strong>: An ensemble method that builds multiple decision trees and combines their outputs for more accurate predictions.</li>
+<li><strong>k-Nearest Neighbors (k-NN)</strong>: Classifies a data point based on the majority class among its nearest neighbors in the feature space.</li>
+</ul>
+</li>
+<li><strong>Example</strong>:<ul>
+<li><strong>Email Spam Detection</strong>: A classification model can be trained to classify emails as either "spam" or "not spam" based on features such as keywords, sender information, and message length.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Regression</strong></p>
+<ul>
+<li><strong>Definition</strong>: Regression is a type of supervised learning where the model learns to predict a continuous numerical value (continuous output) from input features.</li>
+<li><strong>Common Algorithms</strong>:<ul>
+<li><strong>Linear Regression</strong>: Models the relationship between input features and the output by fitting a linear equation to the data.</li>
+<li><strong>Polynomial Regression</strong>: Extends linear regression by fitting a polynomial equation to capture non-linear relationships.</li>
+<li><strong>Support Vector Regression (SVR)</strong>: A version of SVM used for predicting continuous values by finding the best fit line within a certain margin of tolerance.</li>
+<li><strong>Ridge and Lasso Regression</strong>: Variants of linear regression that add regularization to prevent overfitting by penalizing large coefficients.</li>
+<li><strong>Decision Trees and Random Forests</strong>: Can also be used for regression by predicting a continuous value based on the average of the outputs in the leaves of the tree.</li>
+</ul>
+</li>
+<li><strong>Example</strong>:<ul>
+<li><strong>House Price Prediction</strong>: A regression model can be used to predict the price of a house based on features like location, size, number of bedrooms, and age of the property.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="Summary-for-Notes">Summary for Notes<a class="anchor-link" href="#Summary-for-Notes">¶</a></h3><ul>
+<li><strong>Supervised Machine Learning</strong>: Involves learning from labeled data to make predictions about unseen data.<ul>
+<li><strong>Classification</strong>: Predicts categorical labels (e.g., email spam detection).</li>
+<li><strong>Regression</strong>: Predicts continuous numerical values (e.g., house price prediction).</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Unsupervised-Machine-Learning">Unsupervised Machine Learning<a class="anchor-link" href="#Unsupervised-Machine-Learning">¶</a></h2><p><strong>Definition</strong>: Unsupervised machine learning involves training models on datasets without labeled outputs. The algorithm tries to identify patterns, structures, and relationships within the data. Unlike supervised learning, where the model learns from labeled data (input-output pairs), unsupervised learning works with data that only has inputs.</p>
+<p><strong>Purpose</strong>: Unsupervised learning is often used for tasks such as clustering, dimensionality reduction, and anomaly detection, where the goal is to discover hidden structures in data.</p>
+<h3 id="Types-of-Unsupervised-Machine-Learning">Types of Unsupervised Machine Learning<a class="anchor-link" href="#Types-of-Unsupervised-Machine-Learning">¶</a></h3><ol>
+<li><p><strong>Clustering</strong></p>
+<ul>
+<li><strong>Definition</strong>: Clustering is the process of grouping a set of objects in such a way that objects in the same group (or cluster) are more similar to each other than to those in other groups.</li>
+<li><strong>Common Algorithms</strong>:<ul>
+<li><strong>k-Means</strong>: Partitions data into k clusters, where each data point belongs to the cluster with the nearest mean.</li>
+<li><strong>Hierarchical Clustering</strong>: Builds a hierarchy of clusters by either merging small clusters into larger ones (agglomerative) or splitting large clusters into smaller ones (divisive).</li>
+<li><strong>DBSCAN</strong>: Groups data points that are closely packed together, marking points that lie alone as outliers.</li>
+</ul>
+</li>
+<li><strong>Example</strong>:<ul>
+<li><strong>Customer Segmentation</strong>: A retail company might use clustering to segment customers into different groups based on purchasing behavior, enabling targeted marketing strategies.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Dimensionality Reduction</strong></p>
+<ul>
+<li><strong>Definition</strong>: Dimensionality reduction involves reducing the number of input variables in a dataset. This is useful when dealing with high-dimensional data where many features might be redundant or irrelevant.</li>
+<li><strong>Common Algorithms</strong>:<ul>
+<li><strong>Principal Component Analysis (PCA)</strong>: Transforms the data into a new set of dimensions (principal components) that are linear combinations of the original variables, capturing the most variance in the data.</li>
+<li><strong>t-Distributed Stochastic Neighbor Embedding (t-SNE)</strong>: Reduces dimensions while preserving the local structure of the data, often used for visualizing high-dimensional data.</li>
+</ul>
+</li>
+<li><strong>Example</strong>:<ul>
+<li><strong>Image Compression</strong>: PCA can be used to reduce the number of pixels (features) in an image while retaining the essential characteristics, making the image smaller in size without significant loss of quality.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Association</strong></p>
+<ul>
+<li><strong>Definition</strong>: Association learning is the process of finding interesting relationships (associations) between variables in large databases. It aims to discover rules that describe how variables are related.</li>
+<li><strong>Common Algorithms</strong>:<ul>
+<li><strong>Apriori Algorithm</strong>: Identifies frequent itemsets and derives association rules that predict the occurrence of an item based on the occurrence of other items.</li>
+<li><strong>Eclat Algorithm</strong>: A more efficient method for finding frequent itemsets by intersecting transaction lists.</li>
+</ul>
+</li>
+<li><strong>Example</strong>:<ul>
+<li><strong>Market Basket Analysis</strong>: Retailers use association learning to identify products that are frequently purchased together. For instance, if customers often buy bread and butter together, a store might place these items closer to each other to increase sales.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Anomaly Detection</strong></p>
+<ul>
+<li><strong>Definition</strong>: Anomaly detection is the process of identifying rare items, events, or observations that deviate significantly from the majority of the data.</li>
+<li><strong>Common Algorithms</strong>:<ul>
+<li><strong>Isolation Forest</strong>: Detects anomalies by isolating observations. Anomalies are expected to be easier to isolate.</li>
+<li><strong>One-Class SVM</strong>: Classifies data points as similar or different based on a single class of data, commonly used for detecting anomalies.</li>
+</ul>
+</li>
+<li><strong>Example</strong>:<ul>
+<li><strong>Fraud Detection</strong>: In financial systems, anomaly detection can be used to identify unusual transactions that could indicate fraudulent activity.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="Summary-for-Notes">Summary for Notes<a class="anchor-link" href="#Summary-for-Notes">¶</a></h3><ul>
+<li><strong>Unsupervised Machine Learning</strong>: Involves learning from data without labeled outputs, focusing on finding hidden structures and patterns.<ul>
+<li><strong>Clustering</strong>: Groups data into clusters based on similarity (e.g., customer segmentation).</li>
+<li><strong>Dimensionality Reduction</strong>: Reduces the number of input features while retaining important information (e.g., image compression).</li>
+<li><strong>Association</strong>: Finds relationships between variables (e.g., market basket analysis).</li>
+<li><strong>Anomaly Detection</strong>: Identifies data points that deviate from the norm (e.g., fraud detection).</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Reinforcement-Learning">Reinforcement Learning<a class="anchor-link" href="#Reinforcement-Learning">¶</a></h2><p><strong>Definition</strong>: Reinforcement learning (RL) is a type of machine learning where an agent learns to make decisions by taking actions in an environment to maximize some notion of cumulative reward. The agent interacts with the environment, receives feedback in the form of rewards or penalties, and adjusts its actions to achieve the best possible outcome over time.</p>
+<p><strong>Purpose</strong>: Reinforcement learning is used in scenarios where the decision-making process involves sequential actions, and the goal is to learn a strategy or policy that maximizes long-term rewards.</p>
+<h3 id="Key-Concepts-in-Reinforcement-Learning">Key Concepts in Reinforcement Learning<a class="anchor-link" href="#Key-Concepts-in-Reinforcement-Learning">¶</a></h3><ul>
+<li><strong>Agent</strong>: The decision-maker or learner.</li>
+<li><strong>Environment</strong>: The external system the agent interacts with.</li>
+<li><strong>State</strong>: A representation of the current situation or status of the environment.</li>
+<li><strong>Action</strong>: The decisions or moves the agent can make.</li>
+<li><strong>Reward</strong>: The feedback the agent receives after taking an action, indicating the success of that action.</li>
+<li><strong>Policy</strong>: The strategy that the agent uses to decide which action to take in a given state.</li>
+<li><strong>Value Function</strong>: A function that estimates the expected cumulative reward for a state (or state-action pair), helping the agent assess long-term benefits.</li>
+</ul>
+<h3 id="Types-of-Reinforcement-Learning">Types of Reinforcement Learning<a class="anchor-link" href="#Types-of-Reinforcement-Learning">¶</a></h3><ol>
+<li><p><strong>Model-Based Reinforcement Learning</strong></p>
+<ul>
+<li><strong>Definition</strong>: In model-based RL, the agent builds or is provided with a model of the environment. This model includes information about how the environment responds to different actions (i.e., transition probabilities) and the rewards associated with those actions.</li>
+<li><strong>Use Case</strong>: The agent uses this model to simulate outcomes and plan actions ahead of time, optimizing its decisions based on predicted future states and rewards.</li>
+<li><strong>Example</strong>:<ul>
+<li><strong>Robotics</strong>: A robot with a model of its environment can simulate different paths to reach a target location, considering obstacles and optimizing for energy efficiency or speed.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Model-Free Reinforcement Learning</strong></p>
+<ul>
+<li><strong>Definition</strong>: In model-free RL, the agent does not build a model of the environment. Instead, it learns a policy directly from experience by interacting with the environment and observing the outcomes of its actions.</li>
+<li><strong>Subtypes</strong>:<ul>
+<li><strong>Value-Based Methods</strong>:<ul>
+<li><strong>Definition</strong>: These methods focus on estimating the value of states or state-action pairs (how good it is to be in a particular state or take a particular action).</li>
+<li><strong>Common Algorithm</strong>: <strong>Q-Learning</strong>: The agent learns a value function (Q-value) that estimates the expected reward for taking an action in a given state and uses it to select actions that maximize the Q-value.</li>
+<li><strong>Example</strong>:<ul>
+<li><strong>Video Game AI</strong>: An AI agent in a game learns to navigate through levels by maximizing the score, where the score represents the reward.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Policy-Based Methods</strong>:<ul>
+<li><strong>Definition</strong>: These methods focus on learning the policy directly, which is the mapping from states to actions, without explicitly estimating value functions.</li>
+<li><strong>Common Algorithm</strong>: <strong>REINFORCE Algorithm</strong>: The agent updates its policy based on the rewards obtained from following the policy, adjusting it to increase the likelihood of selecting actions that lead to higher rewards.</li>
+<li><strong>Example</strong>:<ul>
+<li><strong>Robotic Arm Movement</strong>: A robotic arm learns to pick and place objects by optimizing the sequence of movements that results in successfully completing the task with minimal error.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Actor-Critic Methods</strong>:<ul>
+<li><strong>Definition</strong>: These methods combine value-based and policy-based approaches. The "actor" updates the policy directly, while the "critic" evaluates the policy by estimating the value function.</li>
+<li><strong>Example</strong>:<ul>
+<li><strong>Self-Driving Cars</strong>: A self-driving car uses actor-critic methods to learn driving policies, where the actor decides the actions (e.g., steering, braking), and the critic evaluates the safety and efficiency of those actions over time.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="Summary-for-Notes">Summary for Notes<a class="anchor-link" href="#Summary-for-Notes">¶</a></h3><ul>
+<li><strong>Reinforcement Learning</strong>: A type of learning where an agent learns to make decisions by interacting with an environment to maximize cumulative rewards.<ul>
+<li><strong>Model-Based RL</strong>: The agent builds or uses a model of the environment to simulate outcomes and plan actions (e.g., robotics path planning).</li>
+<li><strong>Model-Free RL</strong>: The agent learns directly from experience, without a model of the environment.<ul>
+<li><strong>Value-Based Methods</strong>: Focus on estimating value functions (e.g., Q-learning in video games).</li>
+<li><strong>Policy-Based Methods</strong>: Focus on learning the policy directly (e.g., robotic arm movement).</li>
+<li><strong>Actor-Critic Methods</strong>: Combine value-based and policy-based methods (e.g., self-driving cars).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -7585,16 +7789,6 @@ a.anchor-link {
 <li><p>Other areas of growth include explainable AI, which aims to make machine learning models more transparent and interpretable, and federated learning, which enables multiple devices to collaborate on training machine learning models without sharing raw data. As machine learning continues to evolve, it has the potential to transform every aspect of our lives.</p>
 </li>
 </ul>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 </div>
 </div>
 </div>
